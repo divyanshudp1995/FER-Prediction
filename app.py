@@ -3,7 +3,14 @@ import pickle
 import numpy as np
 
 st.set_option('deprecation.showfileUploaderEncoding',False) 
-model = pickle.load(open('india.pkl','rb'))
+model_india = pickle.load(open('india.pkl','rb'))
+model_uk = pickle.load(open('uk.pkl','rb'))
+model_canada = pickle.load(open('canada.pkl','rb'))
+model_brazil = pickle.load(open('brazil.pkl','rb'))
+model_australia = pickle.load(open('australia.pkl','rb'))
+model_switzerland = pickle.load(open('switzerland.pkl','rb'))
+model_japan = pickle.load(open('japan.pkl','rb'))
+model_china = pickle.load(open('china.pkl','rb'))
 
 st.title("Foreign Exchange Rate Prediction")
 
@@ -20,26 +27,117 @@ if page == "India":
     Topic3 = st.number_input('Proportion of Articles in Topic 3')
     Topic5 = st.number_input('Proportion of Articles in Topic 5')
     
-    ok = st.button("Calculate Loan Status")
+    ok = st.button("Calculate Foreign Exchange Rate")
     if ok:
         x = np.array([[PPP, GDP, INV, GDPPER, EXP, Topic2, Topic3, Topic5]])
         #x = x.astype(float)
 
-        fer_india = model.predict(x)
+        fer_india = model_india.predict(x)
         st.subheader(f"The Foreign Exchange Rate is {fer_india}")
 
 elif page == "Australia":
-    print(show_predict_page())
+    INF = st.number_input('Inflation')
+    GDP = st.number_input('Gross Domestic Product')
+    INV = st.number_input('Investment')
+    GDPPER = st.number_input('GDP per Capita')
+    Topic3 = st.number_input('Proportion of Articles in Topic 3')
+    
+    ok = st.button("Calculate Foreign Exchange Rate")
+    if ok:
+        x = np.array([[INF, GDP, INV, GDPPER, Topic3]])
+        #x = x.astype(float)
+
+        fer_australia = model_australia.predict(x)
+        st.subheader(f"The Foreign Exchange Rate is {fer_australia}")
+        
 elif page == "Canada":
-    print(show_predict_page())
+    GDP = st.number_input('Gross Domestic Product')
+    INV = st.number_input('Investment')
+    GDPPER = st.number_input('GDP per Capita')
+    Topic3 = st.number_input('Proportion of Articles in Topic 3')
+    
+    ok = st.button("Calculate Foreign Exchange Rate")
+    if ok:
+        x = np.array([[GDP, INV, GDPPER Topic3]])
+        #x = x.astype(float)
+
+        fer_canada = model_canada.predict(x)
+        st.subheader(f"The Foreign Exchange Rate is {fer_canada}")
+        
 elif page == "Switzerland":
-    print(show_predict_page())
+    PPP = st.number_input('PPP')
+    GDP = st.number_input('Gross Domestic Product')
+    INV = st.number_input('Investment')
+    INF = st.number_input('Inflation')
+    Topic2 = st.number_input('Proportion of Articles in Topic 2')
+    Topic3 = st.number_input('Proportion of Articles in Topic 3')
+    Topic5 = st.number_input('Proportion of Articles in Topic 5')
+    
+    ok = st.button("Calculate Foreign Exchange Rate")
+    if ok:
+        x = np.array([[PPP, GDP, INV, INF, Topic2, Topic3, Topic5]])
+        #x = x.astype(float)
+
+        fer_switzerland = model_switzerland.predict(x)
+        st.subheader(f"The Foreign Exchange Rate is {fer_switzerland}")
+        
 elif page == "UK":
-    print(show_predict_page())
+    Topic1 = st.number_input('Proportion of Articles in Topic 1')
+    Topic4 = st.number_input('Proportion of Articles in Topic 4')
+    
+    ok = st.button("Calculate Foreign Exchange Rate")
+    if ok:
+        x = np.array([[Topic1, Topic4]])
+        #x = x.astype(float)
+
+        fer_uk = model_uk.predict(x)
+        st.subheader(f"The Foreign Exchange Rate is {fer_uk}")
+        
 elif page == "Brazil":
-    print(show_predict_page())
+    PPP = st.number_input('PPP')
+    GDP = st.number_input('Gross Domestic Product')
+    Topic2 = st.number_input('Proportion of Articles in Topic 2')
+    Topic3 = st.number_input('Proportion of Articles in Topic 3')
+    Topic5 = st.number_input('Proportion of Articles in Topic 5')
+    
+    ok = st.button("Calculate Foreign Exchange Rate")
+    if ok:
+        x = np.array([[PPP, GDP, Topic2, Topic3, Topic5]])
+        #x = x.astype(float)
+
+        fer_brazil = model_brazil.predict(x)
+        st.subheader(f"The Foreign Exchange Rate is {fer_brazil}")
+        
 elif page == "Japan":
-    print(show_predict_page())
+    PPP = st.number_input('PPP')
+    GDP = st.number_input('Gross Domestic Product')
+    INV = st.number_input('Investment')
+    GDPPER = st.number_input('GDP per Capita')
+    INF = st.number_input('Inflation')
+    Topic2 = st.number_input('Proportion of Articles in Topic 2')
+    Topic5 = st.number_input('Proportion of Articles in Topic 5')
+    
+    ok = st.button("Calculate Foreign Exchange Rate")
+    if ok:
+        x = np.array([[PPP, GDP, INV, GDPPER, INF, Topic2, Topic5]])
+        #x = x.astype(float)
+
+        fer_japan = model_japan.predict(x)
+        st.subheader(f"The Foreign Exchange Rate is {fer_japan}")
+        
 elif page == "China":
-    print(show_predict_page())
+    PPP = st.number_input('PPP')
+    INV = st.number_input('Investment')
+    Topic1 = st.number_input('Proportion of Articles in Topic 1')
+    Topic2 = st.number_input('Proportion of Articles in Topic 2')
+    Topic3 = st.number_input('Proportion of Articles in Topic 3')
+    Topic5 = st.number_input('Proportion of Articles in Topic 5')
+    
+    ok = st.button("Calculate Foreign Exchange Rate")
+    if ok:
+        x = np.array([[PPP, INV, Topic1, Topic2, Topic3, Topic5]])
+        #x = x.astype(float)
+
+        fer_china = model_china.predict(x)
+        st.subheader(f"The Foreign Exchange Rate is {fer_china}")
     
