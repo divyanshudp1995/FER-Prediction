@@ -4,9 +4,20 @@ import pickle
 st.set_option('deprecation.showfileUploaderEncoding',False) 
 model = pickle.load(open('india.pkl','rb'))
 
+st.title("Foreign Exchange Rate Prediction")
+
+st.write("Please select the country for which you want to predict the foreign exchange rate")
+
 page = st.sidebar.selectbox("Select your Country", ("India", "Australia", "Canada", "Switzerland", "UK", "Brazil", "Japan", "China"))
 if page == "India":
-    print(show_predict_page())
+    PPP = st.number_input('PPP')
+    GDP = st.number_input('Gross Domestic Product')
+    INV = st.number_input('Investment')
+    GDPPER = st.number_input('GDP per Capita')
+    EXP = st.number_input('Exports')
+    Topic2 = st.number_input('Proportion of Articles in Topic 2')
+    Topic3 = st.number_input('Proportion of Articles in Topic 3')
+    Topic5 = st.number_input('Proportion of Articles in Topic 5')
 elif page == "Australia":
     print(show_predict_page())
 elif page == "Canada":
@@ -22,13 +33,6 @@ elif page == "Japan":
 elif page == "China":
     print(show_predict_page())
     
-st.title("Loan Predicition")
-
-st.write("""### We need some information to predict the loan predicition""")
-
-st.write(""" ### Model - Linear Regression""")
-
-
 
 gender_1 = {
 "Male",
@@ -49,6 +53,8 @@ credit_history = {
 "1",
 "0",
 }
+
+
 
 gender = st.selectbox("Gender",gender_1)
 marital_status = st.selectbox("Marital Status",marital_status)
