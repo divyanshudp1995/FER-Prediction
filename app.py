@@ -41,5 +41,5 @@ loan_amount = st.slider("Loan Amount (in $)", 0, 1000, 100,10)
 loan_amount_term = st.slider("Loan Amount Term (in months)", 0, 480, 40,20)
 
 ok = st.button("Calculate Loan Status")
-  if ok:
-      st.subheader(f"The Loan Approval Status  - " + " ")
+if ok:
+  st.subheader(f"The Loan Approval Status  - " + " ")
