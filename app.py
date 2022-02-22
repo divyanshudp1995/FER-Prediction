@@ -2,7 +2,7 @@ import streamlit as st
 import pickle
 
 st.set_option('deprecation.showfileUploaderEncoding',False) 
-model = pickle.load(open('new_model.pkl','rb'))
+model = pickle.load(open('india.pkl','rb'))
 
 gender = st.selectbox("Gender",gender_1)
 marital_status = st.selectbox("Marital Status",marital_status)
