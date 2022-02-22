@@ -6,21 +6,21 @@ model = pickle.load(open('india.pkl','rb'))
 
 page = st.sidebar.selectbox("Select your Country", ("India", "Australia", "Canada", "Switzerland", "UK", "Brazil", "Japan", "China"))
 if page == "India":
-    #show_predict_page()
+    print(show_predict_page())
 elif page == "Australia":
-    #show_predict_page_2()
+    print(show_predict_page())
 elif page == "Canada":
-    #show_predict_page_3()
+    print(show_predict_page())
 elif page == "Switzerland":
-    #show_predict_page_4()
+    print(show_predict_page())
 elif page == "UK":
-    #show_predict_page_5()
+    print(show_predict_page())
 elif page == "Brazil":
-    #show_predict_page_6()
+    print(show_predict_page())
 elif page == "Japan":
-    #show_predict_page_7()
+    print(show_predict_page())
 elif page == "China":
-    #show_predict_page_8()
+    print(show_predict_page())
     
 st.title("Loan Predicition")
 
