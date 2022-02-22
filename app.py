@@ -4,6 +4,24 @@ import pickle
 st.set_option('deprecation.showfileUploaderEncoding',False) 
 model = pickle.load(open('india.pkl','rb'))
 
+page = st.sidebar.selectbox("Select your Country", ("India", "Australia", "Canada", "Switzerland", "UK", "Brazil", "Japan", "China"))
+if page == "India":
+    #show_predict_page()
+elif page == "Australia":
+    #show_predict_page_2()
+elif page == "Canada":
+    #show_predict_page_3()
+elif page == "Switzerland":
+    #show_predict_page_4()
+elif page == "UK":
+    #show_predict_page_5()
+elif page == "Brazil":
+    #show_predict_page_6()
+elif page == "Japan":
+    #show_predict_page_7()
+elif page == "China":
+    #show_predict_page_8()
+    
 st.title("Loan Predicition")
 
 st.write("""### We need some information to predict the loan predicition""")
