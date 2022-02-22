@@ -26,7 +26,7 @@ if page == "India":
         #x = x.astype(float)
 
         fer_india = model.predict(x)
-        st.subheader(f"The Foreign Exchange Rate is  - "  " " + fer_india)
+        st.subheader(f"The Foreign Exchange Rate is {fer_india}")
 
 elif page == "Australia":
     print(show_predict_page())
