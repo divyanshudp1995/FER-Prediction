@@ -1,5 +1,6 @@
 import streamlit as st
 import pickle
+import numpy as np
 
 st.set_option('deprecation.showfileUploaderEncoding',False) 
 model = pickle.load(open('india.pkl','rb'))
