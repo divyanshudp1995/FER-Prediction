@@ -3,14 +3,14 @@ import pickle
 import numpy as np
 
 st.set_option('deprecation.showfileUploaderEncoding',False) 
-model_india = pickle.load(open('india1.pkl','rb'))
-model_uk = pickle.load(open('uk1.pkl','rb'))
-model_canada = pickle.load(open('canada1.pkl','rb'))
-model_brazil = pickle.load(open('brazil1.pkl','rb'))
-model_australia = pickle.load(open('australia1.pkl','rb'))
-model_switzerland = pickle.load(open('switzerland1.pkl','rb'))
-model_japan = pickle.load(open('japan1.pkl','rb'))
-model_china = pickle.load(open('china1.pkl','rb'))
+model_india1 = pickle.load(open('india1.pkl','rb'))
+model_uk1 = pickle.load(open('uk1.pkl','rb'))
+model_canada1 = pickle.load(open('canada1.pkl','rb'))
+model_brazil1 = pickle.load(open('brazil1.pkl','rb'))
+model_australia1 = pickle.load(open('australia1.pkl','rb'))
+model_switzerland1 = pickle.load(open('switzerland1.pkl','rb'))
+model_japan1 = pickle.load(open('japan1.pkl','rb'))
+model_china1 = pickle.load(open('china1.pkl','rb'))
 
 st.title("Foreign Exchange Rate Prediction")
 st.write("***Please select the country from the side bar***")
@@ -32,7 +32,7 @@ if page == "India":
         x = np.array([[PPP, GDP, INV, GDPPER, EXP, Topic2, Topic3, Topic5]])
         #x = x.astype(float)
 
-        fer_india = model_india.predict(x)
+        fer_india = model_india1.predict(x)
         st.subheader(f"The Foreign Exchange Rate is {fer_india}")
 
 elif page == "Australia":
@@ -47,7 +47,7 @@ elif page == "Australia":
         x = np.array([[INF, GDP, INV, GDPPER, Topic3]])
         #x = x.astype(float)
 
-        fer_australia = model_australia.predict(x)
+        fer_australia = model_australia1.predict(x)
         st.subheader(f"The Foreign Exchange Rate is {fer_australia}")
         
 elif page == "Canada":
@@ -61,7 +61,7 @@ elif page == "Canada":
         x = np.array([[GDP, INV, GDPPER, Topic3]])
         #x = x.astype(float)
 
-        fer_canada = model_canada.predict(x)
+        fer_canada = model_canada1.predict(x)
         st.subheader(f"The Foreign Exchange Rate is {fer_canada}")
         
 elif page == "Switzerland":
@@ -78,7 +78,7 @@ elif page == "Switzerland":
         x = np.array([[PPP, GDP, INV, INF, Topic2, Topic3, Topic5]])
         #x = x.astype(float)
 
-        fer_switzerland = model_switzerland.predict(x)
+        fer_switzerland = model_switzerland1.predict(x)
         st.subheader(f"The Foreign Exchange Rate is {fer_switzerland}")
         
 elif page == "UK":
@@ -90,7 +90,7 @@ elif page == "UK":
         x = np.array([[Topic1, Topic4]])
         #x = x.astype(float)
 
-        fer_uk = model_uk.predict(x)
+        fer_uk = model_uk1.predict(x)
         st.subheader(f"The Foreign Exchange Rate is {fer_uk}")
         
 elif page == "Brazil":
@@ -105,7 +105,7 @@ elif page == "Brazil":
         x = np.array([[PPP, GDP, Topic2, Topic3, Topic5]])
         #x = x.astype(float)
 
-        fer_brazil = model_brazil.predict(x)
+        fer_brazil = model_brazil1.predict(x)
         st.subheader(f"The Foreign Exchange Rate is {fer_brazil}")
         
 elif page == "Japan":
@@ -122,7 +122,7 @@ elif page == "Japan":
         x = np.array([[PPP, GDP, INV, GDPPER, INF, Topic2, Topic5]])
         #x = x.astype(float)
 
-        fer_japan = model_japan.predict(x)
+        fer_japan = model_japan1.predict(x)
         st.subheader(f"The Foreign Exchange Rate is {fer_japan}")
         
 elif page == "China":
@@ -138,6 +138,6 @@ elif page == "China":
         x = np.array([[PPP, INV, Topic1, Topic2, Topic3, Topic5]])
         #x = x.astype(float)
 
-        fer_china = model_china.predict(x)
+        fer_china = model_china1.predict(x)
         st.subheader(f"The Foreign Exchange Rate is {fer_china}")
     
