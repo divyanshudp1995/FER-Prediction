@@ -75,7 +75,7 @@ elif page == "Switzerland":
     
     ok = st.button("Calculate Foreign Exchange Rate")
     if ok:
-        x = np.array([[PPP, GDP, INV, INF, Topic2, Topic3, Topic5]])
+        x = [[PPP, GDP, INV, INF, Topic2, Topic3, Topic5]]
         #x = x.astype(float)
 
         fer_switzerland = model_switzerland1.predict(x)
