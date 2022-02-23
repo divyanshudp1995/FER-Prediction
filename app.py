@@ -13,7 +13,7 @@ model_japan = pickle.load(open('japan.pkl','rb'))
 model_china = pickle.load(open('china.pkl','rb'))
 
 st.title("Foreign Exchange Rate Prediction")
-st.write("**Please select the country from the side bar**")
+st.write("*Please select the country from the side bar*")
 st.write("Please enter the following information")
 
 page = st.sidebar.selectbox("Select your Country", ("India", "Australia", "Canada", "Switzerland", "UK", "Brazil", "Japan", "China"))
