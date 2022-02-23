@@ -3,14 +3,14 @@ import pickle
 import numpy as np
 
 st.set_option('deprecation.showfileUploaderEncoding',False) 
-model_india = pickle.load(open('india.pkl','rb'))
-model_uk = pickle.load(open('uk.pkl','rb'))
-model_canada = pickle.load(open('canada.pkl','rb'))
-model_brazil = pickle.load(open('brazil.pkl','rb'))
-model_australia = pickle.load(open('australia.pkl','rb'))
-model_switzerland = pickle.load(open('switzerland.pkl','rb'))
-model_japan = pickle.load(open('japan.pkl','rb'))
-model_china = pickle.load(open('china.pkl','rb'))
+model_india = pickle.load(open('india1.pkl','rb'))
+model_uk = pickle.load(open('uk1.pkl','rb'))
+model_canada = pickle.load(open('canada1.pkl','rb'))
+model_brazil = pickle.load(open('brazil1.pkl','rb'))
+model_australia = pickle.load(open('australia1.pkl','rb'))
+model_switzerland = pickle.load(open('switzerland1.pkl','rb'))
+model_japan = pickle.load(open('japan1.pkl','rb'))
+model_china = pickle.load(open('china1.pkl','rb'))
 
 st.title("Foreign Exchange Rate Prediction")
 st.write("*Please select the country from the side bar*")
