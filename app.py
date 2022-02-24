@@ -23,9 +23,9 @@ if page == "India":
     INV = st.number_input('Investment')
     GDPPER = st.number_input('GDP per Capita')
     EXP = st.number_input('Exports')
-    Topic2 = st.number_input('Proportion of Articles in Topic 2')
-    Topic3 = st.number_input('Proportion of Articles in Topic 3')
-    Topic5 = st.number_input('Proportion of Articles in Topic 5')
+    Topic2 = st.number_input('Proportion of Articles in Topic 2 (Social Media)')
+    Topic3 = st.number_input('Proportion of Articles in Topic 3 (Finance)')
+    Topic5 = st.number_input('Proportion of Articles in Topic 5 (Business)')
     
     ok = st.button("Calculate Foreign Exchange Rate")
     if ok:
@@ -40,7 +40,7 @@ elif page == "Australia":
     GDP = st.number_input('Gross Domestic Product')
     INV = st.number_input('Investment')
     GDPPER = st.number_input('GDP per Capita')
-    Topic3 = st.number_input('Proportion of Articles in Topic 3')
+    Topic3 = st.number_input('Proportion of Articles in Topic 3 (Finance)')
     
     ok = st.button("Calculate Foreign Exchange Rate")
     if ok:
@@ -54,7 +54,7 @@ elif page == "Canada":
     GDP = st.number_input('Gross Domestic Product')
     INV = st.number_input('Investment')
     GDPPER = st.number_input('GDP per Capita')
-    Topic3 = st.number_input('Proportion of Articles in Topic 3')
+    Topic3 = st.number_input('Proportion of Articles in Topic 3 (Finance)')
     
     ok = st.button("Calculate Foreign Exchange Rate")
     if ok:
@@ -69,9 +69,9 @@ elif page == "Switzerland":
     GDP = st.number_input('Gross Domestic Product')
     INV = st.number_input('Investment')
     INF = st.number_input('Inflation')
-    Topic2 = st.number_input('Proportion of Articles in Topic 2')
-    Topic3 = st.number_input('Proportion of Articles in Topic 3')
-    Topic5 = st.number_input('Proportion of Articles in Topic 5')
+    Topic2 = st.number_input('Proportion of Articles in Topic 2 (Social Media)')
+    Topic3 = st.number_input('Proportion of Articles in Topic 3 (Finance)')
+    Topic5 = st.number_input('Proportion of Articles in Topic 5 (Business)')
     
     ok = st.button("Calculate Foreign Exchange Rate")
     if ok:
@@ -82,8 +82,8 @@ elif page == "Switzerland":
         st.subheader(f"The Foreign Exchange Rate is {fer_switzerland}")
         
 elif page == "UK":
-    Topic1 = st.number_input('Proportion of Articles in Topic 1')
-    Topic4 = st.number_input('Proportion of Articles in Topic 4')
+    Topic1 = st.number_input('Proportion of Articles in Topic 1 (Market)')
+    Topic4 = st.number_input('Proportion of Articles in Topic 4 (Politics)')
     
     ok = st.button("Calculate Foreign Exchange Rate")
     if ok:
@@ -96,9 +96,9 @@ elif page == "UK":
 elif page == "Brazil":
     PPP = st.number_input('PPP')
     GDP = st.number_input('Gross Domestic Product')
-    Topic2 = st.number_input('Proportion of Articles in Topic 2')
-    Topic3 = st.number_input('Proportion of Articles in Topic 3')
-    Topic5 = st.number_input('Proportion of Articles in Topic 5')
+    Topic2 = st.number_input('Proportion of Articles in Topic 2 (Social Media)')
+    Topic3 = st.number_input('Proportion of Articles in Topic 3 (Finance)')
+    Topic5 = st.number_input('Proportion of Articles in Topic 5 (Business)')
     
     ok = st.button("Calculate Foreign Exchange Rate")
     if ok:
@@ -114,8 +114,8 @@ elif page == "Japan":
     INV = st.number_input('Investment')
     GDPPER = st.number_input('GDP per Capita')
     INF = st.number_input('Inflation')
-    Topic2 = st.number_input('Proportion of Articles in Topic 2')
-    Topic5 = st.number_input('Proportion of Articles in Topic 5')
+    Topic2 = st.number_input('Proportion of Articles in Topic 2 (Social Media)')
+    Topic5 = st.number_input('Proportion of Articles in Topic 5 (Business)')
     
     ok = st.button("Calculate Foreign Exchange Rate")
     if ok:
@@ -128,10 +128,10 @@ elif page == "Japan":
 elif page == "China":
     PPP = st.number_input('PPP')
     INV = st.number_input('Investment')
-    Topic1 = st.number_input('Proportion of Articles in Topic 1')
-    Topic2 = st.number_input('Proportion of Articles in Topic 2')
-    Topic3 = st.number_input('Proportion of Articles in Topic 3')
-    Topic5 = st.number_input('Proportion of Articles in Topic 5')
+    Topic1 = st.number_input('Proportion of Articles in Topic 1 (Market)')
+    Topic2 = st.number_input('Proportion of Articles in Topic 2 (Social Media)')
+    Topic3 = st.number_input('Proportion of Articles in Topic 3 (Finance)')
+    Topic5 = st.number_input('Proportion of Articles in Topic 5 (Business)')
     
     ok = st.button("Calculate Foreign Exchange Rate")
     if ok:
