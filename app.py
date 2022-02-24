@@ -29,7 +29,7 @@ if page == "India":
     
     ok = st.button("Calculate Foreign Exchange Rate")
     if ok:
-        x = np.array([[PPP, GDP, INV, GDPPER, EXP, Topic2, Topic3, Topic5]])
+        x = np.array([[PPP, Topic5, GDP, Topic2, INV, Topic3, GDPPER, EXP]])
         #x = x.astype(float)
 
         fer_india = model_india1.predict(x)
@@ -44,7 +44,7 @@ elif page == "Australia":
     
     ok = st.button("Calculate Foreign Exchange Rate")
     if ok:
-        x = np.array([[INF, GDP, INV, GDPPER, Topic3]])
+        x = np.array([[INV, GDP, INF, Topic3, GDPPER]])
         #x = x.astype(float)
 
         fer_australia = model_australia1.predict(x)
@@ -58,7 +58,7 @@ elif page == "Canada":
     
     ok = st.button("Calculate Foreign Exchange Rate")
     if ok:
-        x = np.array([[GDP, INV, GDPPER, Topic3]])
+        x = np.array([[INV, GDP, Topic3, GDPPER]])
         #x = x.astype(float)
 
         fer_canada = model_canada1.predict(x)
@@ -102,7 +102,7 @@ elif page == "Brazil":
     
     ok = st.button("Calculate Foreign Exchange Rate")
     if ok:
-        x = np.array([[PPP, GDP, Topic2, Topic3, Topic5]])
+        x = np.array([[PPP, Topic2, Topic5, Topic3, GDP]])
         #x = x.astype(float)
 
         fer_brazil = model_brazil1.predict(x)
@@ -119,7 +119,7 @@ elif page == "Japan":
     
     ok = st.button("Calculate Foreign Exchange Rate")
     if ok:
-        x = np.array([[PPP, GDP, INV, GDPPER, INF, Topic2, Topic5]])
+        x = np.array([[GDP, PPP, Topic5, INF, Topic2, INV, GDPPER]])
         #x = x.astype(float)
 
         fer_japan = model_japan1.predict(x)
@@ -135,7 +135,7 @@ elif page == "China":
     
     ok = st.button("Calculate Foreign Exchange Rate")
     if ok:
-        x = np.array([[PPP, INV, Topic1, Topic2, Topic3, Topic5]])
+        x = np.array([[Topic2, PPP, Topic5, Topic1, INV, Topic3]])
         #x = x.astype(float)
 
         fer_china = model_china1.predict(x)
