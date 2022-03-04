@@ -12,7 +12,7 @@ model_switzerland1 = pickle.load(open('switzerland.pkl','rb'))
 model_japan1 = pickle.load(open('japan.pkl','rb'))
 model_china1 = pickle.load(open('china.pkl','rb'))
 
-st.title("Foreign Exchange Rate Prediction")
+st.title("Foreign Exchange Rate Prediction !11111111111")
 st.write("***Please select the country from the side bar***")
 st.write("Please enter the following information")
 
